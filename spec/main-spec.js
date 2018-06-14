@@ -16,12 +16,12 @@ describe('#addStuScore', () => {
     //    sinon.spy(console, 'log');
 
     it('should console the format is not right,and show the right format', () => {
-        let stuScore = "Bob,20121211,语文：90,数学:80";
+        let stuScore = "Bob,20121211,Chinese：90,Math:80";
         let result = main.addStuScore(stuScore);
         expect(result).toEqual(`请按正确的格式输入（格式：姓名, 学号, 学科: 成绩, ...）：`);
     });
     it('should return the student score add successfully', () => {
-        let stuScore = "Bob,20180001,语文:90,数学:96,英语:88,编程:98";
+        let stuScore = "Bob,20180001,Chinese:90,Math:96,English:88,Program:98";
         let result = main.addStuScore(stuScore);
         expect(result).toEqual("学生Bob的成绩被添加")
     })
